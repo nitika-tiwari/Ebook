@@ -1,0 +1,53 @@
+<head>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+    
+    .slick-slide{
+      transition: all 0.7s ease;
+      padding:25px;
+      padding-left:75px;
+      padding-right:15px;
+      padding-top:40px;
+      position:relative;
+      perspective:1000px;
+    }
+    
+    .slick-slide img{
+      height:250px;
+      object-fit:cover;
+      box-shadow:0 0 25px -5px rgba(0,0,0,0.5);
+      transition: all 0.7s ease;
+      transform:rotatey(-90deg);
+      perspective:7000px;
+      opacity:0.8;
+    }
+    .slick-active img{
+       transform:rotatey(0);
+      opacity:1;
+    }
+    
+    /*pawan*/
+    
+    .slick-slider .slick-list .slick-track .slick-slide {
+        display: flex;
+        justify-content: center;
+    }
+    .slick-slider .slick-list .slick-track .slick-slide img {
+        width: 100%;
+        height: auto;
+    }
+    /*.slick-slider .slick-list .slick-track .slick-slide p {
+        width: 550px;
+        height: auto;
+        margin: 0 10px;
+    }*/
+    
+    
+    </style>
+    </head>

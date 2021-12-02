@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Including the jQuery
+		library's script -->
+	<script src=
+"https://code.jquery.com/jquery-3.5.1.min.js">
+	</script>
+</head>
+
+<body style="text-align: center;">
+	
+
+
+	<div id="container">
+		<div>
+			govind
+			<div>
+				Grandchild
+			</div>
+		</div>
+	</div>
+
+	<div id="output-container"></div>
+
+	<script>
+		// loop through the child elements
+		// of the "#container" div
+		$("#container").children()
+				.each(function () {
+
+			// "this" is the current child
+			// in the loop grabbing this
+			// element in the form of string
+			// and appending it to the
+			// "#output-container" div
+			var element = $(this)
+					.prop('outerHTML');
+
+			$("#output-container")
+					.append(element);
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<style type="text/css">img {
+    width:50%;
+}
+element.style {
+    width: 50px!important;
+    position: relative;
+    left: -2590px;
+    top: 0px;
+    z-index: 999;
+    opacity: 1;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script> 
+<script src="wow_book.min.js"></script>
+
+<script type="text/javascript" src="./wow_book/pdf.combined.min.js"></script>
+
+<link rel="stylesheet" href="css/wow_book.css" type="text/css" />
+
+    <input type="radio" class="genderCheck" name="gender" value="Male"  >Male
+    <input type="radio" class="genderCheck"  name="gender" value="Female">Female
+
+    <input type="text" id="tb" >
+
+    <button onClick="myfun()" formnovalidate>Get Image</button>
+
+    <button onClick="window.location.reload();">Refresh Page</button>  
+
+<!--     <span id="result"></span>
+ -->
+    <div id="my_flip_book">
+            <span id="myList"></span>
+
+</div>
+
+ 
+<script type="text/javascript">
+ $("#my_flip_book").wowBook({
+    pdf: 'sample.pdf'
+  });
+function myfun() {
+  var text = document.getElementById("tb").value;
+
+         var ele = document.getElementsByClassName('genderCheck');
+            
+            var result=document.getElementById("result");
+
+             for(i = 0; i < ele.length; i++){
+
+                 if(ele[i].checked && ele[i].value=="Male"){
+
+                    result.innerHTML="Boy";
+                      for (var i = 0; i < text.length; i++) {
+    var letter = text.charAt(i);
+    var firstimage ="dream/image_"+letter + 0+".png";
+    var secondimage = "dream/image_"+letter + 1+".png";
+
+    var html = document.createElement("div")
+
+    html.innerHTML = '<p><img src='+firstimage+' /></p><p><img src='+secondimage+' /></p>';
+     document.getElementById("myList").appendChild(html);
+
+  }
+                 }
+
+                 else if(ele[i].checked && ele[i].value=="Female"){
+
+                    result.innerHTML="Girl";
+                                     for (var i = 0; i < text.length; i++) {
+    var letter = text.charAt(i);
+    var firstimage ="princes/image_"+letter + 0+".png";
+    var secondimage = "princes/image_"+letter + 1+".png";
+
+    var html = document.createElement("div")
+
+    html.innerHTML = '<p><img src='+firstimage+' /></p><p><img src='+secondimage+' /></p>';
+     document.getElementById("myList").appendChild(html);
+
+  }
+              }  
+                
+             }
+            
+}
+
+
+
+</script>

@@ -1,0 +1,95 @@
+<script src="book.js"></script>
+
+<link rel="stylesheet" href="wow_book.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="preview.css">
+    <style>
+        .js #features {
+            margin-left: -12000px; width: 100%;
+        }
+       
+       .cover {
+    background: #ffffff url(../dream/banner/boy_0.png) no-repeat;
+    background-size: 100% 100%;
+}
+ </style>
+  <section class="form_section">
+ <input type="radio" class="genderCheck" name="gender" value="Male"  >Male
+    <input type="radio" class="genderCheck"  name="gender" value="Female">Female
+
+    <input type="text" id="tb" >
+
+    <button onClick="myfun()" formnovalidate>Get Image</button>
+
+    <button onClick="window.location.reload();">Refresh Page</button>  
+  <div id="result"></div>
+ </section>
+
+
+
+<div id="mybook">
+
+ <div id='cover'>
+
+        <div class="inputname"><h2><span id="myinput"></span></h2></div>
+
+</div>
+
+   <!-- front banner pages -->
+        <div class="banner">
+
+        <img src="dream/banner/banner_01.png" />
+
+       </div>
+        <div class="banner">
+
+        <img src="dream/banner/banner_02.png" />
+
+       </div>
+        
+     
+<!-- front banner page end -->
+                <div data-double='true' >
+                      <p><img src='dream/boy_0.png'/></p>  
+                </div>
+
+                <div data-double='true' >
+                      <p><img src='dream/boy_1.png'/></p>
+                </div>
+
+                <div data-double='true' >
+                      <p><img src='dream/boy_2.png'/></p>     
+                </div>
+                  <!-- js logic code here -->
+        <div data-double='true' id="myList">
+
+         
+         </div>
+                   
+                  <div data-double='true' >
+                      <p> <img src="dream/banner/boy_last1.jpg" /></p>
+                </div>
+                  <div data-double='true' >
+                      <p> <img src="dream/banner/boy_last0.png" /></p>
+                </div>
+				  <div>
+				  	<img src="dream/banner/cover_last.png" width="100%" height="100%" />
+				  </div>
+
+
+
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="wow_book.min.js"></script>
+
+
+ <script type="text/javascript"> 
+  $(document).ready(function() {
+    $('#mybook').wowBook({
+      height : 500,
+      width  : 600
+    });
+  });
+</script>
